@@ -50,15 +50,20 @@ public class MainActivity extends AppCompatActivity {
                     parsedDistance=distance.getString("text");
 
                 } catch (ProtocolException e) {
+                    parsedDistance="ProtocolException";
                     e.printStackTrace();
                 } catch (MalformedURLException e) {
+                    parsedDistance="MalformedURLException";
                     e.printStackTrace();
                 } catch (IOException e) {
+                    parsedDistance="IOException";
                     e.printStackTrace();
                 } catch (JSONException e) {
+                    parsedDistance="JSONException";
                     e.printStackTrace();
                 }
                 catch (Exception e) {
+                    parsedDistance=e.getMessage();
                     e.printStackTrace();
                 }
             }
